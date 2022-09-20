@@ -9,6 +9,7 @@ import CourseDescriptionPage from "./CourseDescription";
 // import Wishlist from './Wishlist';
 // import SignUp from './SignUp'
 import SearchResultDisplay from './ResultDisplay'
+import EmptyPage from './EmptyPage';
 
 function CourseDescription (props) {
   let query = useQuery();
@@ -54,6 +55,11 @@ export default class NavbarComp extends Component {
                 Education Pathways
               </Nav.Link>
             </Navbar.Brand>
+            <Navbar.Brand>
+              <Nav.Link href="/lab1" style={{ color: "white", display: "inline" }}>
+              ECE444-Lab1
+              </Nav.Link>
+            </Navbar.Brand>
 
             <Navbar.Toggle />
             <Navbar.Collapse>
@@ -93,6 +99,9 @@ We are looking for feedback to improve Education Pathways and make it more usefu
 
       </div>
               {/* <SearchResultDisplay /> */}
+            </Route>
+            <Route path="/lab1">
+              <EmptyPage />
             </Route>
             <Route path="/search">
               <SearchResultDisplay />
